@@ -71,7 +71,7 @@ function addSearchItem (listElement, valueElement) {
 function removeSearch(id) {
     for(var i = 0; i < recentSearches.length; i++) {
         if (recentSearches[i].id == id) {
-            delete recentSearches[i];
+            recentSearches.splice(i,1);
             break;
         }
     }
