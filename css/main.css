@@ -112,8 +112,9 @@ div.input-area {
     border: 1px solid #eee;
     -webkit-box-shadow: 0px 11px 5px -9px #eee;
     -moz-box-shadow: 0px 11px 5px -9px #eee;
-    box-shadow: 0px 11px 5px -9px #eee;    
-    height: 35px;
+    box-shadow: 0px 11px 5px -9px #eee;
+    box-sizing: border-box;
+    height: 45px;
 
 
 }
@@ -125,7 +126,7 @@ div.input-area input {
     box-sizing: border-box;
     color:#222;
     font-family: sans-serif;
-    height: 100%;
+    height: auto;
     text-indent: 20px;
 }
 
