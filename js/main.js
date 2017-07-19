@@ -1,6 +1,7 @@
 'use strict';
 
 var recentSearches = [];
+var originaList = document.getElementById('list-searches');
 
 /**
  * @description This method saves in the array recentSearches a search.
@@ -15,7 +16,7 @@ function saveSearch() {
 function showRecentSearches() {
     var list = document.getElementById('list-searches');
     recentSearches.forEach(function (iterator) {
-        addElement(list, iterator.data);
+        addElement(list, iterator);
     });
 }
 
@@ -23,7 +24,8 @@ function addElement (listElement, valueElement) {
     // create a new li element
     // and give it some content
     var newLi = document.createElement('li');
-    var newContent = document.createTextNode(valueElement);
+    var newContent = document.createTextNode(valueElement.data);
+    var newHref = document.create
     newLi.appendChild(newContent); //add the text node to the newly created li.
     listElement.appendChild(newLi);
 }
