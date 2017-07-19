@@ -22,27 +22,20 @@
         <![endif]-->
 
         <section id="body">
-            
+
             <div class="logo">
                 <img id="logo" src="img/logo.PNG">
             </div>
-            
+
             <div class="input-area">
-                <input id="input-looking-for" type="text" onfocus="showRecentSearches()">
+                <input id="input-looking-for" type="text" onfocus="showRecentSearches()" onblur="hideRecentSearches()" onchange="hideRecentSearches()">
                 <button id="input-button-voice" onclick="procvoice();"></button>
-                
+
                 <!-- remove class hidden on click input-looking-for -->
                 <div id="text-area" class="hidden">
-                    
                     <ul id="list-searches" style="list-style: none">
 
                     </ul>
-
-                    <div class="onsearchButtonArea ">
-                        <button id="search-button-ta" onclick="saveSearch()">CoolCool Search</button>
-                        <button id="search-secondary-button-ta" onclick="saveSearch()">I'm Feeling Happy</button>
-                    </div>                  
-            
                 </div>
             </div>
 
