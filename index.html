@@ -22,23 +22,35 @@
         <![endif]-->
 
         <section id="body">
+            
             <div class="logo">
                 <img id="logo" src="img/logo.PNG">
             </div>
+            
             <div class="input-area">
                 <input id="input-looking-for" type="text" onfocus="showRecentSearches()">
-                <div id="text-area">
+                <button id="input-button-voice" onclick="procvoice();"></button>
+                
+                <!-- remove class hidden on click input-looking-for -->
+                <div id="text-area" class="hidden">
+                    
                     <ul id="list-searches" style="list-style: none">
 
                     </ul>
+
+                    <div class="onsearchButtonArea ">
+                        <button id="search-button" onclick="saveSearch()">CoolCool Search</button>
+                        <button id="search-secondary-button" onclick="saveSearch()">I'm Feeling Happy</button>
+                    </div>                  
             
                 </div>
-                <button id="input-button-voice" onclick="procvoice();">Voice</button>
             </div>
+
             <div class="button-area">
                 <button id="search-button" onclick="saveSearch()">CoolCool Search</button>
                 <button id="search-secondary-button" onclick="saveSearch()">I'm Feeling Happy</button>
             </div>
+
             <div class="sponsor-area">
                 <p>CoolCool.mx offered in <a href="#">Español (México)</a></p>
             </div>
