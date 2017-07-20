@@ -18,6 +18,9 @@ function saveSearch() {
     } else {
         recentSearches.push({id: 0, data: search});
     }
+    if (search.length == 0) {
+        recentSearches.pop();
+    }
     document.getElementById('input-looking-for').value = '';
 }
 
