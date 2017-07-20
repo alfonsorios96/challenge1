@@ -148,7 +148,7 @@ div.input-area button#input-button-voice {
     width: 40px;
     float: right;
     position: absolute;
-    right: 1px;
+    right: 10px;
     top: 8px;
 
 
@@ -252,7 +252,9 @@ footer ul#options-right {
 }
 
 
-
+#input-button-voice {
+    text-indent: 20px;
+}
 
 
 

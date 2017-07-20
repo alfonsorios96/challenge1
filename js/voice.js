@@ -10,20 +10,23 @@
 
     recognition.onstart = function() {
       recognizing = true;
-      console.log("Listening...");
+      console.log("...");
     }
 
     recognition.onresult = function(event) {
       for (var i = event.resultIndex; i < event.results.length; i++) {
-        if(event.results[i].isFinal)
+        if(event.results[i].isFinal){
+          document.getElementById("input-looking-for").value = ''
           document.getElementById("input-looking-for").value += event.results[i][0].transcript;
         }
+        
     }
+  }
     recognition.onerror = function(event) {}
 
     recognition.onend = function() {
       recognizing = false;
-      document.getElementById("input-button-voice").innerHTML = "Listening";
+      document.getElementById("input-button-voice").innerHTML = " ";
       console.log("listening is finish");
     }
   }
@@ -33,10 +36,16 @@
     if (recognizing == false) {
       recognition.start();
       recognizing = true;
-      document.getElementById("input-button-voice").innerHTML = "Stoped";
+      document.getElementById("input-button-voice").innerHTML = "...";
+
+      setTimeout(function(){
+      recognition.stop();
+      recognizing = false;
+      document.getElementById("input-button-voice").innerHTML = " ";
+    },4300)
     } else {
       recognition.stop();
       recognizing = false;
-      document.getElementById("input-button-voice").innerHTML = "Voice";
+      document.getElementById("input-button-voice").innerHTML = " ";
     }
   }
